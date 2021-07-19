@@ -81,18 +81,22 @@
             // 체크 박스를 선택하면 호출되는 함수입니다
                 kakaoMap();
 
-                $(function(){
-                    doCopy1 = function(){
-                    var clipboard = new Clipboard('#clipboard1');
+                function copy1() {
+                    var copyText = document.getElementById('sin1');
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999);
+                    document.execCommand("copy"); //복사
                     }
-                    doCopy2 = function(){
-                    var clipboard = new Clipboard('#clipboard2');
+                function copy2() {
+                    var copyText = document.getElementById('sin2');
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999);
+                    document.execCommand("copy"); //복사
                     }
-                });
                 </script>
     </section>
-    <input type="hidden" id="sin1" value="209211671928">
-    <input type="hidden" id="sin2" value="3333175856583">
+    <input type="text" id="sin1" value="209211671928">
+    <input type="text" id="sin2" value="3333175856583">
     <section id="main-slider" class="flexslider fullscreen" style="width:100%;">
         <div id="imgbox" style="width: 100%;">
             <img src="images/footer.jpg" style="width:100%; margin: 0 auto; display: block;">
@@ -103,12 +107,12 @@
             <img src="images/sin1.jpg" style="width:100%; margin: 0 auto; display: block;">
         </div>
         <div id="imgbox" style="width: 100%;">
-                <a id="clipboard1" data-clipboard-target="#sin1" style="cursor: pointer;">
+                <a onclick="copy1()" style="cursor: pointer;">
                 <img src="images/sin2.jpg" style="width:100%; margin: 0 auto; display: block;">
             </a>
             </div>
             <div id="imgbox" style="width: 100%;">
-                    <a id="clipboard2" data-clipboard-target="#sin2" style="cursor: pointer;">
+                    <a onclick="copy2()" style="cursor: pointer;">
                 <img src="images/sin3.jpg" style="width:100%; margin: 0 auto; display: block;">
             </a>
             </div>
