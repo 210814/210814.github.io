@@ -10,7 +10,7 @@
     <meta name="author" content="Sungchi">
     <title>2021년 8월 14일 오후12시 40분</title>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=acae90bee2abddb1a3eff2c4d3e1dc17"></script>
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
     <link rel="icon" href="images/favicon.jpg">
     <!-- <link href="css/style.css" rel="stylesheet" media="screen"> -->
 </head>
@@ -94,8 +94,8 @@
                 //     copyText.setSelectionRange(0, 99999);
                 //     document.execCommand("copy"); //복사
                 //     }
-
-                var clipboard = new ClipboardJS('#sin1'); 
+                var btn = document.getElementById('sin1');
+                var clipboard = new ClipboardJS('btn'); 
                 clipboard.on('success', function(e) { alert("현재 URL이 복사되었습니다."); e.clearSelection(); });
 
                 </script>
