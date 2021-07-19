@@ -61,6 +61,9 @@
     imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
     imageOption = {offset: new kakao.maps.Point(27, 69)}; 
 
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(35.22340547671507, 128.6804956691977); // 마커가 표시될 위치입니다
+
             var marker = new kakao.maps.Marker({
                 position: markerPosition, 
                 image: markerImage // 마커이미지 설정 
