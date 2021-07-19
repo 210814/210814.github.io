@@ -10,6 +10,7 @@
     <meta name="author" content="Sungchi">
     <title>2021년 8월 14일 오후12시 40분</title>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=acae90bee2abddb1a3eff2c4d3e1dc17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
     <link rel="icon" href="images/favicon.jpg">
     <!-- <link href="css/style.css" rel="stylesheet" media="screen"> -->
 </head>
@@ -81,18 +82,22 @@
             // 체크 박스를 선택하면 호출되는 함수입니다
                 kakaoMap();
 
-                function copy1() {
-                    var copyText = document.getElementById('sin1');
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999);
-                    document.execCommand("copy"); //복사
-                    }
-                function copy2() {
-                    var copyText = document.getElementById('sin2');
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999);
-                    document.execCommand("copy"); //복사
-                    }
+                // function copy1() {
+                //     var copyText = document.getElementById('sin1');
+                //     copyText.select();
+                //     copyText.setSelectionRange(0, 99999);
+                //     document.execCommand("copy"); //복사
+                //     }
+                // function copy2() {
+                //     var copyText = document.getElementById('sin2');
+                //     copyText.select();
+                //     copyText.setSelectionRange(0, 99999);
+                //     document.execCommand("copy"); //복사
+                //     }
+
+                var clipboard = new ClipboardJS('#sin1'); 
+                clipboard.on('success', function(e) { alert("현재 URL이 복사되었습니다."); e.clearSelection(); });
+
                 </script>
     </section>
     <input type="text" id="sin1" value="209211671928" style="text-indent: -9999px; border: none;position: relative;left: -1000px;">
