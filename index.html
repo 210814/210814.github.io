@@ -94,9 +94,6 @@
                 //     copyText.setSelectionRange(0, 99999);
                 //     document.execCommand("copy"); //복사
                 //     }
-                var btn = document.getElementById('sin1');
-                var clipboard = new ClipboardJS('btn'); 
-                clipboard.on('success', function(e) { alert("현재 URL이 복사되었습니다."); e.clearSelection(); });
 
                 </script>
     </section>
@@ -128,4 +125,9 @@
         </div>
     </footer>
 </body>
+<script>
+    var btn = document.getElementById('sin1');
+                var clipboard = new ClipboardJS('btn'); 
+                clipboard.on('success', function(e) { alert("현재 URL이 복사되었습니다."); e.clearSelection(); });
+</script>
 </html>
