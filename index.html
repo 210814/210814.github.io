@@ -18,8 +18,11 @@
         margin:0; padding:0; 
     }
     @media screen and (min-width: 999px) {
-        #imgbox img, #map2 {
+        #imgbox img {
             width:1000px !important;
+        }
+        #map2 {
+            width:820px !important;
         }
     }
 </style>
@@ -45,7 +48,7 @@
         </div>
     </section>
     <section id="main-slider" class="flexslider fullscreen" style="width:100%;">
-            <div id="map2" style="height:400px;"></div>
+            <div id="map2" style="width: 400px; margin: 0 auto; height:400px;"></div>
             <script>
                     function kakaoMap(){
                 var container = document.getElementById('map2'); //지도를 담을 영역의 DOM 레퍼런스
